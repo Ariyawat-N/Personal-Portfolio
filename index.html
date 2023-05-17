@@ -25,5 +25,57 @@
             </div>
         </div>
     </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque dicta nesciunt repellat hic, accusantium quibusdam similique iure molestiae itaque quas explicabo! Laboriosam eum voluptatum reprehenderit omnis asperiores autem incidunt.</p>
+                    <div class="tab-titile">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designin Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Designin Web/App Interfaces</li>
+                            <li><span>App Development</span><br>Designin Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designin Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Designin Web/App Interfaces</li>
+                            <li><span>App Development</span><br>Designin Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designin Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Designin Web/App Interfaces</li>
+                            <li><span>App Development</span><br>Designin Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    let tablinks = document.getElementsByClassName("tab-links")
+    let tabcontent = document.getElementsByClassName("tab-content")
+    function opentab(tabname){
+        for(tablinks of tablinks)
+            tablinks.classList.remove("active-link")
+        for(tabcontent of tabcontent)
+            tabcontent.classList.remove("active-tab")
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 </body>
 </html>
